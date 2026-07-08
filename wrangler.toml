@@ -2,4 +2,4 @@ name = "gomez-devia-web"
 compatibility_date = "2026-07-08"
 
 [assets]
-directory = "dist/gomez-devia-web"
+directory = "dist/gomez-devia-web/browser"
