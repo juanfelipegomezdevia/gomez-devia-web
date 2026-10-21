@@ -1,0 +1,322 @@
+:root {
+    --color-dark-blue: #071a2f;
+    --color-blue: #0b2745;
+    --color-cyan: #00b4b6;
+    --color-cyan-bright: #00e5e8;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero-section {
+    min-height: 100vh;
+    background: radial-gradient(circle at 80% 40%, rgba(0, 180, 182, 0.15), transparent 40%),
+                linear-gradient(135deg, #061525 0%, #0b2745 60%, #102f50 100%);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 180, 182, 0.10);
+    right: -150px;
+    top: 50px;
+    z-index: 0;
+}
+
+.text-light-70 {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.text-cyan-highlight {
+    background: linear-gradient(120deg, var(--color-cyan-bright), var(--color-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.tracking-wide {
+    letter-spacing: 1.5px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn-info.btn-glow {
+    background-color: var(--color-cyan) !important;
+    border-color: var(--color-cyan) !important;
+    color: #ffffff !important; 
+    transition: all 0.3s ease;
+}
+
+.btn-info.btn-glow:hover {
+    background-color: var(--color-cyan-bright) !important;
+    border-color: var(--color-cyan-bright) !important;
+    color: #000000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 180, 182, 0.3);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   ETIQUETAS Y TECNOLOGÍAS
+========================= */
+.badge-pill {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 180, 182, 0.4);
+    background: rgba(0, 180, 182, 0.08);
+    color: var(--color-cyan-bright);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    backdrop-filter: blur(4px);
+}
+
+.tech-item {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tech-item:hover {
+    background: rgba(0, 180, 182, 0.15);
+    border-color: var(--color-cyan);
+    color: var(--color-cyan-bright);
+    transform: translateY(-2px);
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-effect-strong {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* =========================
+   FOTO Y PERFIL
+========================= */
+.photo-wrapper {
+    position: relative;
+    width: 360px;
+    max-width: 100%;
+}
+
+.photo-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 180, 182, 0.25);
+    filter: blur(90px);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.hero-photo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 180, 182, 0.4);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.photo-card {
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.photo-card, 
+.photo-card strong {
+    color: var(--color-dark-blue) !important;
+    font-size: 1.1rem;
+}
+
+.photo-card span {
+    color: var(--color-cyan) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.photo-card small {
+    color: #5a6268 !important;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+.services-section {
+    background: #f8fafc;
+}
+
+.section-label {
+    color: var(--color-cyan);
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+/* Color del texto debajo del título "Soluciones de software corporativo" */
+.services-section .text-muted.mx-auto {
+    color: #64748b !important;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid #edf2f7;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 180, 182, 0.2);
+}
+
+.service-card h4 {
+    color: var(--color-dark-blue) !important; 
+}
+
+.service-card p.text-muted {
+    color: #4a5568 !important; 
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(0, 180, 182, 0.10);
+    transition: all 0.3s ease;
+}
+
+.service-icon svg {
+    stroke: var(--color-cyan) !important;
+    opacity: 1 !important;
+}
+
+.service-card:hover .service-icon {
+    background: var(--color-cyan);
+}
+
+.service-card:hover .service-icon svg {
+    stroke: white !important;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 991px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 4rem;
+    }
+    .hero-section .d-flex {
+        justify-content: center;
+    }
+    .photo-wrapper {
+        margin-top: 60px;
+    }
+    .hero-section::before {
+        display: none; 
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .photo-wrapper {
+        width: 100%;
+        max-width: 320px;
+    }
+    .photo-card {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+/* 1. Tarjeta de Perfil (Sobrescribir el text-white) */
+section.hero-section .photo-card strong {
+    color: #071a2f !important; /* Azul oscuro para tu nombre */
+    text-shadow: none !important;
+}
+
+section.hero-section .photo-card span {
+    color: #00b4b6 !important; /* Cyan para el cargo */
+    text-shadow: none !important;
+}
+
+section.hero-section .photo-card small {
+    color: #5a6268 !important; /* Gris oscuro para las tecnologías */
+    text-shadow: none !important;
+}
+
+/* 2. Tarjetas de Servicios: Íconos y Títulos */
+section.services-section .service-card h4 {
+    color: #071a2f !important; /* Azul oscuro para los títulos */
+}
+
+section.services-section .service-icon svg {
+    stroke: #00b4b6 !important; /* Cyan para el borde del ícono */
+    color: #00b4b6 !important;  /* Cyan por si hereda currentColor */
+    opacity: 1 !important;
+}
+
+/* 3. Botón "Iniciar un proyecto" */
+section.hero-section a.btn-info.btn-glow {
+    background-color: #00b4b6 !important;
+    border-color: #00b4b6 !important;
+    color: #ffffff !important; 
+}
+
+section.hero-section a.btn-info.btn-glow:hover {
+    background-color: #00e5e8 !important;
+    border-color: #00e5e8 !important;
+    color: #000000 !important;
+}
